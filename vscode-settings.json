@@ -1,0 +1,74 @@
+{
+    "explorer.autoReveal": false,
+    "window.zoomLevel": 0,
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.sideBar.location": "left",
+    "workbench.activityBar.visible": true,
+    "workbench.statusBar.visible": true,
+    //"editor.codeLens": false,
+    "editor.minimap.enabled": false,
+    "files.autoSave": "afterDelay",
+    "explorer.confirmDelete": false,
+    "vim.easymotion": true,
+    "vim.sneak": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "editor.renderWhitespace": "all",
+     "diffEditor.ignoreTrimWhitespace": false,
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<C-h>"],
+            "after": ["<C-w>","h"]
+        },
+        {
+            "before": ["<C-l>"],
+            "after": ["<C-w>","l"]
+        },
+        {
+            "before": ["<Esc>","<Esc>"],
+            "commands": [":w"]
+        },
+        {
+            "before": ["<leader>","x"],
+            "commands": [":tabn"]
+        },
+        {
+            "before": ["<leader>","z"],
+            "commands": [":tabp"]
+        },
+        {
+            "before": ["<leader>","t", "n"],
+            "commands": [":tabnew"]
+        },
+        {
+            "before": ["<leader>","s","s"],
+            "commands": [":split"]
+        },
+        {
+            "before": ["<leader>","v","v"],
+            "commands": [":vsplit"]
+        },
+        {
+            "before": ["<leader>","h","l"],
+            "commands": [":nohl"]
+        },
+        {
+            "before": ["<leader>","q", "q"],
+            "commands": [":q"]
+        }
+    ],
+    "vim.leader": "<space>",
+    "workbench.iconTheme": "vscode-icon-theme",
+    "breadcrumbs.enabled": true,
+    "csharp.format.enable": false,
+    "explorer.confirmDragAndDrop": false,
+    "extensions.autoUpdate": false,
+    "terminal.integrated.rendererType": "dom",
+    "window.titleBarStyle": "custom",
+    "liveshare.featureSet": "insiders",
+    "vim.commandLineModeKeyBindingsNonRecursive": [
+    
+    ]
+}
