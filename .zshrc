@@ -1,23 +1,19 @@
+export TERM="xterm-256color"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=$PATH:/opt/android-studio-ide-181.5014246-linux/android-studio/bin
-alias nibbler='ssh -i ~/.ssh/id_rsa_gateway _julsouza@nibbler0001.linux.locaweb.com.br'
-alias nibbler2='ssh -i ~/.ssh/id_rsa_gateway _julsouza@nibbler0002.linux.locaweb.com.br'
-alias eclipse='/opt/eclipse/eclipse &'
-alias android='sh /opt/android-studio-ide-181.5014246-linux/android-studio/bin/studio.sh &'
 
 # Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
+export ZSH="/home/juliocesar/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="agnoster"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
+# a theme from this variable instead of looking in $ZSH/themes/
 # If set to an empty array, this variable will have no effect.
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
@@ -31,8 +27,14 @@ ZSH_THEME="agnoster"
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
 
+# Uncomment the following line to automatically update without prompting.
+# DISABLE_UPDATE_PROMPT="true"
+
 # Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
+
+# Uncomment the following line if pasting URLs and other text is messed up.
+# DISABLE_MAGIC_FUNCTIONS=true
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -63,12 +65,11 @@ ZSH_THEME="agnoster"
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
 # Which plugins would you like to load?
-# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git extract web-search yum git-extras docker vagrant)
-
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -89,9 +90,6 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
-
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -100,5 +98,17 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+source /usr/share/powerlevel9k/powerlevel9k.zsh-theme
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.rvm/scripts/rvm
 
-export PATH="/home/juliocesar/.rvm/gems/ruby-2.1.5/bin:/home/juliocesar/.rvm/gems/ruby-2.1.5@global/bin:/home/juliocesar/.rvm/rubies/ruby-2.1.5/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/juliocesar/.rvm/bin:/opt/android-studio-ide-181.5014246-linux/android-studio/bin:/home/juliocesar/.vimpkg/bin"
+# nibbler
+alias nibbler='ssh -i ~/.ssh/id_rsa_gateway _julsouza@nibbler0005.linux.locaweb.com.br'
+alias nibbler2='ssh -i ~/.ssh/id_rsa_gateway _julsouza@nibbler0006.linux.locaweb.com.br'
+
+
+# uso
+# boleto_pay 'http://boletoavulso2.qa.locaweb.com.br/boleto/1100028054/30168369.html'
+function boleto_pay {
+  curl -d "boleto_avulso_url=$1" 'https://fake-orders.qa.locaweb.com.br/boleto_avulso'
+}
