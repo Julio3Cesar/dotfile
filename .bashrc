@@ -115,10 +115,3 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
-alias nibler='ssh -i ~/.ssh/id_rsa_gateway _julsouza@nibbler0001.linux.locaweb.com.br'
-alias nibler2='ssh -i ~/.ssh/id_rsa_gateway _julsouza@nibbler0002.linux.locaweb.com.br'
-
-export PATH="/home/juliocesar/.rvm/gems/ruby-2.1.5/bin:/home/juliocesar/.rvm/gems/ruby-2.1.5@global/bin:/home/juliocesar/.rvm/rubies/ruby-2.1.5/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/juliocesar/.rvm/bin:/opt/android-studio-ide-181.5014246-linux/android-studio/bin:/home/juliocesar/.vimpkg/bin"
